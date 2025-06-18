@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quite Server</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+   <style>
+    /* --------------------------------- */
+    /* --- إعدادات أساسية وتصميم الخلفية --- */
+    /* (تم التحديث ليعكس ألوان اللوجو) */
+    /* --------------------------------- */
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Cairo', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; 
+    }
+
+    .animated-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* تم تغيير ألوان الخلفية إلى درجات الرمادي الداكن والأسود */
+        background: linear-gradient(270deg, #101010, #282828, #1a1a1a, #202020);
+        background-size: 400% 400%;
+        animation: moveGradient 15s ease infinite;
+    }
+
+    @keyframes moveGradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* ------------------------------ */
+    /* --- تصميم الكارت الشخصي --- */
+    /* (تم تحديث الألوان لتناسب المظهر الجديد) */
+    /* ------------------------------ */
+    .profile-card {
+        background: rgba(40, 40, 40, 0.25); /* خلفية داكنة شبه شفافة */
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        color: white;
+        width: 90%;
+        max-width: 400px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        /* تم تغيير لون الإطار الخارجي للكارت */
+        border: 1px solid rgba(192, 192, 192, 0.2); 
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- تصميم الصورة الشخصية --- */
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        /* تم تغيير لون الإطار إلى اللون الفضي */
+        border: 4px solid #cccccc; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .profile-pic:hover {
+        transform: scale(1.1);
+        /* تم تغيير لون الظل عند التمرير إلى اللون الفضي */
+        box-shadow: 0 0 25px #cccccc; 
+    }
+
+    /* --- تصميم النصوص (الاسم والوصف) --- */
+    .name {
+        font-size: 2.2em;
+        margin: 10px 0 5px 0;
+        font-weight: 700;
+        color: #ffffff; /* لون الاسم (أبيض) */
+    }
+
+    .title {
+        font-size: 1.2em;
+        margin: 0 0 30px 0;
+        /* تم تغيير اللون المميز للوصف إلى اللون الفضي */
+        color: #cccccc; 
+        font-weight: 400;
+    }
+
+    /* --- تصميم أيقونات التواصل الاجتماعي --- */
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-links a {
+        color: white; /* لون الأيقونات (أبيض) */
+        font-size: 1.8em;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+        /* تم تغيير لون الأيقونات عند التمرير إلى اللون الفضي */
+        color: #cccccc; 
+        transform: translateY(-5px);
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="animated-background"></div>
+
+    <div class="profile-card">
+        
+       <img src="image/quite server pic.png" alt="صوره" class="profile-pic">
+
+        <h1 class="name"> Quite Server </h1>
+        <p class="title">A server of the best quiet servers where you find comfort and tranquility away from the inconvenience QUITE ! </p>
+
+        <div class="social-links">
+            <a href="discord://-/users/468514598517997588" target="discord owner"><i class="fab fa-discord"></i></a>
+            <a href="discord://-/users/1350866920471007306" target="discord founder"><i class="fab fa-discord"></i></a>
+            <a href="http://www.youtube.com/@NotTiger.1" target="youtube 1"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.youtube.com/@oSenik" target="youtube 2"><i class="fab fa-youtube"></i></a>
+        </div>
+
+    </div>
+
+</body>
+</html>
